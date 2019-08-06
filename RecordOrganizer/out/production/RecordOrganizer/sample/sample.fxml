@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane prefHeight="371" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="height: 600;" text="Add Media">
+            <content>
+              <AnchorPane cacheShape="false" centerShape="false" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="218.0" prefWidth="600.0" scaleShape="false">
+                     <children>
+                        <RadioButton fx:id="recordSelectButton" layoutX="14.0" layoutY="37.0" mnemonicParsing="false" onAction="#switchOptionsRecord" selected="true" text="Record" />
+                        <RadioButton fx:id="cassetteSelectButton" layoutX="14.0" layoutY="54.0" mnemonicParsing="false" onAction="#switchOptionsCassette" text="Cassette" />
+                        <RadioButton fx:id="cdSelectButton" layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#switchOptionsCD" text="Compact Disc" />
+                        <TextField fx:id="nameField" layoutX="82.0" layoutY="114.0" />
+                        <TextField fx:id="conditionField" layoutX="82.0" layoutY="145.0" />
+                        <TextField fx:id="genreField" layoutX="315.0" layoutY="114.0" />
+                        <TextField fx:id="catNumberField" layoutX="82.0" layoutY="210.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Media Type:" />
+                        <TextField fx:id="artistField" layoutX="315.0" layoutY="145.0" />
+                        <TextField fx:id="config1Field" layoutX="315.0" layoutY="177.0" />
+                        <TextField fx:id="config2Field" layoutX="315.0" layoutY="210.0" />
+                        <TextField fx:id="labelField" layoutX="82.0" layoutY="177.0" />
+                        <TextField fx:id="releaseYearField" layoutX="82.0" layoutY="245.0" />
+                        <TextField fx:id="config3Field" layoutX="315.0" layoutY="245.0" />
+                        <Label layoutX="231.0" layoutY="20.0" text="Add Media">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="7.0" layoutY="116.0" text="Name:">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label layoutX="7.0" layoutY="147.0" text="Condition /10:">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label layoutX="7.0" layoutY="179.0" text="Label:">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="212.0" text="Cat Number: ">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="247.0" text="Release Year:">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label layoutX="239.0" layoutY="116.0" text="Genre:">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label layoutX="239.0" layoutY="147.0" text="Artist:">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label fx:id="configLabel1" layoutX="239.0" layoutY="179.0" text="Speed (33/45):">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label fx:id="configLabel2" layoutX="239.0" layoutY="212.0" text="Size:">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label fx:id="configLabel3" layoutX="239.0" layoutY="247.0" text="Colour:">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Button fx:id="addMediaButton" layoutX="494.0" layoutY="145.0" mnemonicParsing="false" onAction="#addMedia" text="Add Media" />
+                        <Button fx:id="clearEntryButton" layoutX="495.0" layoutY="177.0" mnemonicParsing="false" onAction="#clearEntry" text="Clear Entry" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Display Media">
+            <content>
+              <AnchorPane cacheShape="false" centerShape="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" scaleShape="false">
+                     <children>
+                        <ListView fx:id="mediaList" layoutX="8.0" layoutY="7.0" onMouseClicked="#displayMedia" prefHeight="319.0" prefWidth="261.0" />
+                        <Label layoutX="300.0" layoutY="28.0" text="Format:" />
+                        <Label layoutX="300.0" layoutY="45.0" text="Name:" />
+                        <Label layoutX="300.0" layoutY="62.0" text="Condition:" />
+                        <Label layoutX="300.0" layoutY="79.0" text="Label:" />
+                        <Label layoutX="300.0" layoutY="96.0" text="Cat Number:" />
+                        <Label layoutX="300.0" layoutY="113.0" text="Release Year:" />
+                        <Label layoutX="300.0" layoutY="130.0" text="Genre:" />
+                        <Label layoutX="302.0" layoutY="147.0" text="Artist:" />
+                        <Label fx:id="displayConfigLabel1" layoutX="302.0" layoutY="164.0" text="Speed:" />
+                        <Label fx:id="displayConfigLabel2" contentDisplay="RIGHT" layoutX="302.0" layoutY="181.0" text="Size:" />
+                        <Label fx:id="displayConfigLabel3" contentDisplay="RIGHT" layoutX="302.0" layoutY="198.0" text="Colour:" />
+                        <Label fx:id="formatLabel" layoutX="379.0" layoutY="28.0" />
+                        <Label fx:id="nameLabel" layoutX="379.0" layoutY="45.0" />
+                        <Label fx:id="conditionLabel" layoutX="379.0" layoutY="62.0" />
+                        <Label fx:id="labelLabel" layoutX="379.0" layoutY="79.0" />
+                        <Label fx:id="catNumberLabel" layoutX="379.0" layoutY="96.0" />
+                        <Label fx:id="releaseYearLabel" layoutX="379.0" layoutY="113.0" />
+                        <Label fx:id="genreLabel" layoutX="379.0" layoutY="130.0" />
+                        <Label fx:id="artistLabel" layoutX="379.0" layoutY="147.0" />
+                        <Label fx:id="config1LabelResult" layoutX="379.0" layoutY="164.0" />
+                        <Label fx:id="config2LabelResult" layoutX="379.0" layoutY="181.0" />
+                        <Label fx:id="config3LabelResult" layoutX="379.0" layoutY="198.0" />
+                        <Button fx:id="deleteSelectedButton" layoutX="300.0" layoutY="238.0" mnemonicParsing="false" onAction="#deleteSelected" text="Delete Selected" />
+                        <Button fx:id="saveMediaButton" layoutX="486.0" layoutY="238.0" mnemonicParsing="false" onAction="#saveMedia" text="Save Media" />
+                        <Button fx:id="loadMediaButton" layoutX="485.0" layoutY="275.0" mnemonicParsing="false" onAction="#loadMedia" text="Load Media" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

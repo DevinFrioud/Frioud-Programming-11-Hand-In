@@ -1,0 +1,8 @@
+<component name="libraryTable">
+  <library name="org.junit.platform:junit-platform-commons:1.0.0-M6" type="repository">
+    <properties maven-id="junit:junit:4.12" />
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
